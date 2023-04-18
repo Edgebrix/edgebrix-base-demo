@@ -1,4 +1,4 @@
-import { ClerkProvider, SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import "@/styles/globals.css";
 import "@edgebrix-sdk/react/dist/style.css";
 
@@ -9,19 +9,5 @@ export default function App({ Component, pageProps }: AppProps) {
     <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <Component {...pageProps} />
     </ClerkProvider>
-    // <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-    //   <SignedIn>
-    //     <Component {...pageProps} />
-    //   </SignedIn>
-    //   <SignedOut>
-    //     <main>
-    //       <div className="flex h-screen bg-gray-50">
-    //         <div className="m-auto">
-    //           <SignIn redirectUrl="/" />
-    //         </div>
-    //       </div>
-    //     </main>
-    //   </SignedOut>
-    // </ClerkProvider>
   );
 }
