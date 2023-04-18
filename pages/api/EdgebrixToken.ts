@@ -19,7 +19,10 @@ export default async function handler(
       user_id: user.id as string,
       organization_id: orgId
         ? orgId
-        : crypto.createHash("md5").update(userId).digest("hex"),
+        : crypto
+            .createHash("md5")
+            .update(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
+            .digest("hex"),
       user_details: {
         email: user.emailAddresses[0].emailAddress as string,
         name: user.fullName as string,

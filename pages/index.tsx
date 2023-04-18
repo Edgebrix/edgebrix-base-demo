@@ -1,7 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import { EdgebrixStudio, useToken } from "@edgebrix-sdk/react";
 import { useEffect } from "react";
-
 import { SignIn, SignedIn, SignedOut, useUser } from "@clerk/nextjs";
 
 import fetcher from "./api/fetcher";
@@ -22,28 +21,25 @@ export default function Home() {
   );
 
   useEffect(() => {
-    if (!EdgebirxToken?.token) return;
     if (token) return;
-    console.log("user", EdgebirxToken);
+    if (!EdgebirxToken?.token) return;
     setToken(EdgebirxToken?.token);
   }, [EdgebirxToken]);
 
   return (
     <>
       <Header />
-
       <div className="relative">
         <img
-          src="https://logtail.com/packs/static/flare-de1d9ed43780c1e222fa.png"
+          src="https://res.cloudinary.com/dhwxfvlrn/image/upload/f_auto,q_auto/flare-de1d9ed43780c1e222fa_mvkqvk.png"
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
         <main
           className={styles.main}
           style={{
             backgroundColor: "#f5f5f5",
-            //backgroundColor: "#121826",
             backgroundImage:
-              "url(https://logtail.com/packs/static/flare-de1d9ed43780c1e222fa.png)",
+              "url(https://res.cloudinary.com/dhwxfvlrn/image/upload/f_auto,q_auto/flare-de1d9ed43780c1e222fa_mvkqvk.png)",
           }}
         >
           <Navbar />
