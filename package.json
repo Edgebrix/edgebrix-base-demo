@@ -11,7 +11,7 @@
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.8.4",
     "@clerk/nextjs": "^4.16.2",
-    "@edgebrix-sdk/react": "0.0.106",
+    "@edgebrix-sdk/react": "0.0.107",
     "@edgebrix-sdk/server": "^0.0.6",
     "@types/node": "18.15.10",
     "@types/react": "18.0.30",
