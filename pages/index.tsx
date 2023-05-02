@@ -86,15 +86,18 @@ export default function Home() {
         <div className="sm:absolute sm:bottom-0 w-full px-20 py-10 flex justify-between">
           <Link href="https://vercel.com">
             <Image
-              src="https://res.cloudinary.com/dhwxfvlrn/image/upload/v1671793138/logo/e1.svg"
-              alt="Edgebrix Logo"
+              src={
+                process.env.NEXT_PUBLIC_LOGO_URL ??
+                "https://res.cloudinary.com/dhwxfvlrn/image/upload/v1671793138/logo/e1.svg"
+              }
+              alt="Logo"
               width={100}
               height={24}
               priority
             />
           </Link>
           <Link
-            href="https://github.com/vercel/examples/tree/main/storage/kv-redis-starter"
+            href={process.env.NEXT_PUBLIC_LOGO_LINK ?? "https://edgebirx.com"}
             className="flex items-center space-x-2"
           >
             {/* <Image
