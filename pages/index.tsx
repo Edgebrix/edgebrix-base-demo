@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import styles from "@/styles/Home.module.css";
-// @ts-ignore
 import { EdgebrixStudio, useToken } from "@edgebrix-sdk/react";
 import { useEffect } from "react";
 import {
