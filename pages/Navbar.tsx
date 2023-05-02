@@ -11,7 +11,7 @@ function Navbar() {
           npm install&nbsp;
           <code className={styles.code}>@edgebrix-sdk/react</code>
         </p> */}
-      <a href="https://edgebrix.com" target="_blank" rel="noopener noreferrer">
+      {/* <a href="https://edgebrix.com" target="_blank" rel="noopener noreferrer">
         <Image
           src="https://res.cloudinary.com/dhwxfvlrn/image/upload/v1671793138/logo/e1.svg"
           alt="Edgebrix Logo"
@@ -20,9 +20,9 @@ function Navbar() {
           height={28}
           priority
         />
-      </a>
+      </a> */}
 
-      <div>
+      <div className="justify-end">
         <SignedIn>
           <UserButton />
         </SignedIn>
